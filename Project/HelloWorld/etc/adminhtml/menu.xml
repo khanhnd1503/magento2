@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Project_HelloWorld extension
+ *                     NOTICE OF LICENSE
+ * 
+ *                     This source file is subject to the Project License
+ *                     that is bundled with this package in the file LICENSE.txt.
+ *                     It is also available through the world-wide-web at this URL:
+ *                     https://www.project.com/LICENSE.txt
+ * 
+ *                     @category  Project
+ *                     @package   Project_HelloWorld
+ *                     @copyright Copyright (c) 2016
+ *                     @license   https://www.project.com/LICENSE.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Project_HelloWorld::helloworld" title="Hello World" module="Project_HelloWorld" sortOrder="51" resource="Project_HelloWorld::helloworld"/>
+        <add id="Project_HelloWorld::post" title="Posts" module="Project_HelloWorld" sortOrder="10" action="project_helloworld/post" resource="Project_HelloWorld::post" parent="Project_HelloWorld::helloworld"/>
+    </menu>
+</config>

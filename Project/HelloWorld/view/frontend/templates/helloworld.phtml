@@ -1,0 +1,38 @@
+<div class="simplenews">
+    <?php
+    $newsCollection = $block->getCollection();
+    if ($newsCollection->getSize() > 0) :
+        ?>
+        <!--        <div class="toolbar top">-->
+        <!--            --><?php //echo $block->getPagerHtml(); ?>
+        <!--        </div>-->
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($newsCollection as $news): ?>
+                <tr>
+                    <td><?php echo $news->getId();?></td>
+                    <td><?php echo $news->getTitle();?></td>
+                    <td><?php echo $news->getDescription();?></td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+        <div style="clear: both"></div>
+
+        <div class="toolbar-bottom">
+            <div class="toolbar bottom">
+                <?php echo $block->getPagerHtml(); ?>
+            </div>
+        </div>
+    <?php else : ?>
+        <p><?php echo __('Have no article!') ?></p>
+    <?php endif; ?>
+</div>
